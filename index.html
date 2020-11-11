@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap-4.4.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>User Registration</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+          
+        }
+        .hero{
+            /* bottom: 0; */
+            height: 100vh;
+            width: 100%;
+            background-image: url(img/AnimationImages/darkSky.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow-x: hidden;
+            
+        }
+        .highway{
+            height: 160px;
+            width: 500%;
+            display: block;
+            background-image: url(img/AnimationImages/road2.jpeg);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-repeat: repeat-x;
+            animation: highway 10s linear infinite;
+        }
+        @keyframes highway{
+            100%{
+                transform: translate(-3400px);
+
+            }
+        }
+        .city{
+            height: 300px;
+            width: 500%;
+            background-image: url();
+            position: absolute;
+            bottom:0;
+            left: 0;
+            right: 0;
+            display: block;
+            z-index: 1;
+            background-repeat:repeat-x;
+            animation: city 20s linear infinite;
+        }
+        @keyframes city{
+            100%{
+                transform: translate(-1400px);
+            }
+            /* 50%{
+                transform: translate(-700px);
+            } */
+            
+        }
+        .car{
+            width: 340px;
+            left: 70%;
+            bottom: -0px;
+            transform: translateX(-50%);
+            /* transform: translateZ(-10%); */
+            /* transform: translateY(-50%); */
+            /* transform: translate3d(-50%); */
+            position: absolute;
+            z-index: 2;
+        }
+        .car img{
+            width: 100%;
+            animation: car 10s linear infinite;
+        }
+        @keyframes car {
+            100%{
+                transform: translate(-2px);
+            }
+            50%{
+                transform: translate(1px);
+            }
+            0%{
+                transform: translate(-2px);
+            }
+        }
+        .caryellow{
+            width: 340px;
+            right: 180%;
+            bottom: -0px;
+            transform: translateX(-50%);
+            /* transform: translateZ(-10%); */
+            /* transform: translateY(-50%); */
+            /* transform: translate3d(-50%); */
+            position: absolute;
+            z-index: 2;
+        }
+        .caryellow img{
+            width: 100%;
+            animation: car 1s linear infinite;
+        }
+        @keyframes caryellow{
+            100%{
+                transform: translate(-2px);
+            }
+            50%{
+                transform: translate(1px);
+            }
+            0%{
+                transform: translate(-2px);
+            }
+        }
+        .wheelyellow{
+            left: 200%;
+            bottom: 0px;
+            /* transform: translateX(-50%); */
+            /* transform: translateY(-100%) ; */
+            transform: translateZ(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+        .wheelyellow img{
+            width: 180px !important;
+            height: 130px !important;
+            animation: wheel 1s linear infinite;
+        }
+        .yellow-back-wheel{
+            right: 720px;
+            position: absolute;
+           
+        }
+        .yellow-front-wheel{
+        
+            right: 535px;
+            position: absolute;
+        }  
+        .wheel{
+            left: 65%;
+            bottom: 170px;
+            /* transform: translateX(-50%); */
+            /* transform: translateY(-100%) ; */
+            transform: translateZ(-50%);
+            position: absolute;
+            z-index: 2;
+        }
+        .wheel img{
+            width: 210px;
+            height: 150px;
+            animation: wheel 1s linear infinite;
+        }
+        .back-wheel{
+           
+            left: -145px;
+            position: absolute;
+        }
+        .front-wheel{
+           
+            left: 62px;
+            position: absolute;
+        }
+        @keyframes wheel{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .btn{
+            border: 2px solid rgb(255, 255, 255);
+            height: 50px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.8s !important;
+        }
+        a{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* text-transform: capitalize; */
+            text-decoration: none !important;
+
+        }
+        .btn{
+            background: -webkit-linear-gradient(0deg, transparent 50%,#27eba7 50%  );
+            background-size: 400px 80px !important;
+            border: 4px solid #27eba6 !important;
+        }
+        .btn:hover{
+            background-position: 200px 0 !important;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="hero container-fluid">
+        <div class="btn alert-success">
+            <a href="UserRegistration.php">Register Here</a>
+            
+        </div>
+        <div class="highway form-control"> </div>
+        <div class="city"> </div>
+
+        <div class="car">
+                <img src="img/AnimationImages/blackCar.png" alt="car">
+                <div class="caryellow">
+                    <img src="img/AnimationImages/yellowCar.png" alt="car">
+                </div>
+              
+        </div>
+        <div class="wheel">
+            <img src="img/AnimationImages/wheel1.png" class="back-wheel" alt="wheel">
+            <img src="img/AnimationImages/wheel1.png" class="front-wheel" alt="wheel">
+            <div class="wheelyellow">
+                <img src="img/AnimationImages/wheel2.png" class="yellow-back-wheel" alt="wheel">
+                <img src="img/AnimationImages/wheel2.png" class="yellow-front-wheel"  alt="wheel">
+            </div>
+
+        </div>
+    </div>
+    
+ 
+    
+</body>
+</html>
